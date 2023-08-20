@@ -6,7 +6,7 @@ export default function Featured() {
     <section className='text-white flex flex-col lg:flex-row flex-wrap'>
         <Post
           source="/images/space-img-5.jpg"
-          title='universe we know'
+          title='Universe we know'
           body='El universo está en constante cambio y evolución.
             Las estrellas nacen y mueren, los planetas se forman y se destruyen,
             las galaxias se fusionan y se separan. El futuro del universo es incierto,
@@ -28,6 +28,9 @@ export default function Featured() {
             La luz visible es la parte del espectro electromagnético que tiene una longitud de onda entre 380 y 700 nanómetros.'
           author='Somebody'
         ></Post>
+        <div className='bg-violet-500 px-5 rounded m-auto w-fit'>
+          See More 
+        </div>
     </section>
   )
 }

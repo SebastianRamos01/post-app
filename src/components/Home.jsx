@@ -5,7 +5,7 @@ import Footer from './Footer'
 
 export default function Home() {
   return (
-    <div className='bg-gradient-to-br from-black to-violet-950'>
+    <div className='bg-gradient-to-br from-black to-violet-950 py-3'>
       <Header></Header>
       <div className='text-white font-amatic bg-black bg-opacity-30 w-[95%] m-auto lg:w-[80%]'>
         <section className='flex flex-col justify-center items-center h-[87vh] '>
