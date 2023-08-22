@@ -1,5 +1,6 @@
 import React from 'react'
 import Post from './Post'
+import { Link } from 'react-router-dom'
 
 export default function Featured() {
   return (
@@ -28,9 +29,11 @@ export default function Featured() {
             La luz visible es la parte del espectro electromagnético que tiene una longitud de onda entre 380 y 700 nanómetros.'
           author='Somebody'
         ></Post>
-        <div className='bg-violet-500 px-5 rounded m-auto w-fit'>
-          See More 
-        </div>
+        <Link to={"/posts"}>
+          <div className='bg-violet-500 px-5 rounded m-auto w-fit'>
+            See More 
+          </div>
+        </Link>
     </section>
   )
 }
