@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Featured() {
   return (
-    <section className='text-white flex flex-col lg:flex-row flex-wrap'>
+    <section className='text-white flex flex-col sm:flex-row flex-wrap'>
         <Post
           source="/images/space-img-5.jpg"
           title='Universe we know'
@@ -29,11 +29,6 @@ export default function Featured() {
             La luz visible es la parte del espectro electromagnético que tiene una longitud de onda entre 380 y 700 nanómetros.'
           author='Somebody'
         ></Post>
-        <Link to={"/posts"}>
-          <div className='bg-violet-500 px-5 rounded m-auto w-fit'>
-            See More 
-          </div>
-        </Link>
     </section>
   )
 }

@@ -1,4 +1,6 @@
 import React from 'react'
+import igLogo from '../../src/assets/instagram.svg'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -15,10 +17,10 @@ export default function Footer() {
         <div className='text-xl'>
             Contact
         </div>
-        <div className='flex gap-3 text-lg'>
-          <div>
-            Icon
-          </div>
+        <div className='flex gap-3'>
+          <Link>
+            <img src={igLogo} alt="instagramLogo" className='w-5'/>
+          </Link>
           <div>
             Icon
           </div>
