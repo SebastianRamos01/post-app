@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className='text-white flex justify-center gap-3'>
         <Link to={"/posts"}>Posts</Link>
         <Link to={"/"}>
-            <h1 className='text-2xl underline'>Post-App</h1>
+            <h1 className='text-2xl underline'>Home</h1>
         </Link>
         <Link to={"/about"}>About</Link>
     </nav>

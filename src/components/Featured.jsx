@@ -1,12 +1,11 @@
 import React from 'react'
 import Post from './Post'
-import { Link } from 'react-router-dom'
 
 export default function Featured() {
   return (
     <section className='text-white flex flex-col sm:flex-row flex-wrap'>
         <Post
-          source="/images/space-img-5.jpg"
+          source="/images/star-dust.jpeg"
           title='Universe we know'
           body='El universo está en constante cambio y evolución.
             Las estrellas nacen y mueren, los planetas se forman y se destruyen,
