@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import Post from './Post'
+import data from '../data/post'
 
 export default function List() {
   return (
@@ -12,38 +13,15 @@ export default function List() {
                 <p className='text-2xl'>All Posts</p>
             </div>
             <section className='text-white flex flex-col sm:flex-row flex-wrap'>
-                <Post
-                    source="/images/space-img-3.jpg"
-                    title='Light'
-                    body='La luz visible es la parte del espectro electromagnético que podemos ver.
-                        El espectro electromagnético incluye ondas de radio, microondas, infrarrojos, visible, ultravioleta, rayos X y rayos gamma.
-                        La luz visible es la parte del espectro electromagnético que tiene una longitud de onda entre 380 y 700 nanómetros.'
-                    author='Somebody'
-                ></Post>
-                <Post
-                    source="/images/space-img-2.jpg"
-                    title='Stars'
-                    body='La luz visible es la parte del espectro electromagnético que podemos ver.
-                        El espectro electromagnético incluye ondas de radio, microondas, infrarrojos, visible, ultravioleta, rayos X y rayos gamma.
-                        La luz visible es la parte del espectro electromagnético que tiene una longitud de onda entre 380 y 700 nanómetros.'
-                    author='Somebody'
-                ></Post>
-                <Post
-                    source="/images/space-img-5.jpg"
-                    title='Stars'
-                    body='La luz visible es la parte del espectro electromagnético que podemos ver.
-                        El espectro electromagnético incluye ondas de radio, microondas, infrarrojos, visible, ultravioleta, rayos X y rayos gamma.
-                        La luz visible es la parte del espectro electromagnético que tiene una longitud de onda entre 380 y 700 nanómetros.'
-                    author='Somebody'
-                ></Post>
-                <Post
-                    source="/images/space-img.jpg"
-                    title='Stars'
-                    body='La luz visible es la parte del espectro electromagnético que podemos ver.
-                        El espectro electromagnético incluye ondas de radio, microondas, infrarrojos, visible, ultravioleta, rayos X y rayos gamma.
-                        La luz visible es la parte del espectro electromagnético que tiene una longitud de onda entre 380 y 700 nanómetros.'
-                    author='Somebody'
-                ></Post>
+                {data?.map(post => 
+                    <Post
+                        key={post.id}
+                        source={post.image}
+                        title={post.title}
+                        body={post.body}
+                        author={post.author}
+                    ></Post>
+                    )}
             </section>
             <Footer></Footer>
         </div>
