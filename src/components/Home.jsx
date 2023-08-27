@@ -16,7 +16,7 @@ export default function Home() {
             </h1>
             <p className='text-xl'>
               Theres a lot that we dont know of the observable universe.
-              So this "Blog" explore the wonders of the universe that we know and others that are still unknow.
+              This "Blog" explore the wonders of the universe that we know and others that are still unknow.
             </p>
           </div>
           <Link to={"/about"}>
@@ -26,8 +26,8 @@ export default function Home() {
           </Link>
         </section>
         <Featured></Featured>
-        <Link to={"/posts"}>
-          <div className='bg-violet-500 px-5 rounded m-auto w-fit'>
+        <Link to={"/posts"} className='flex w-fit m-auto'>
+          <div className='bg-violet-500 px-5 rounded m-1 transition ease-in-out hover:scale-110 duration-300'>
             See More 
           </div>
         </Link>

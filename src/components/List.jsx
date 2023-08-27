@@ -20,6 +20,7 @@ export default function List() {
                         title={post.title}
                         body={post.body}
                         author={post.author}
+                        created={post.createdAt}
                     ></Post>
                     )}
             </section>

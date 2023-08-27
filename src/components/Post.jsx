@@ -4,6 +4,7 @@ export default function Post({
     source,
     title,
     body,
+    created,
     id,
     author
 }) {
@@ -17,7 +18,10 @@ export default function Post({
           {body}
         </p>
         <p>
-           - {author}
+          - {author}
+        </p>
+        <p className='text-gray-500'>
+          - publicado {created}
         </p>
     </div>
   )

@@ -15,6 +15,7 @@ export default function Featured() {
             title={post.title}
             body={post.body}
             author={post.author}
+            created={post.createdAt}
           ></Post>
           )}
     </section>
