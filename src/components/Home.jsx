@@ -12,11 +12,11 @@ export default function Home() {
         <section className='flex flex-col justify-center items-center h-[87vh]'>
           <div className='text-center w-[80%]'>
             <h1 className='text-3xl'>
-              The universe We know
+              In Universe
             </h1>
             <p className='text-xl'>
-              Theres a lot that we dont know of the observable universe.
-              This "Blog" explore the wonders of the universe that we know and others that are still unknow.
+              Somos parte de un universo del que conocemos muy poco, materia oscura, energia oscura, espacio infinto.
+              Este blog explora brevemente partes del vasto cosmos que comformamos.
             </p>
           </div>
           <Link to={"/about"}>

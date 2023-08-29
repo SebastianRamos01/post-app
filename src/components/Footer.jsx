@@ -21,12 +21,6 @@ export default function Footer() {
           <Link>
             <img src={igLogo} alt="instagramLogo" className='w-5'/>
           </Link>
-          <div>
-            Icon
-          </div>
-          <div>
-            Icon
-          </div>
         </div>
     </footer>
   )
