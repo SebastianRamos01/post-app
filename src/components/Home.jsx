@@ -11,7 +11,7 @@ export default function Home() {
       <div className='text-white font-amatic bg-black bg-opacity-30 w-[95%] m-auto sm:w-[80%]'>
         <section className='flex flex-col justify-center items-center h-[87vh]'>
           <div className='text-center w-[80%]'>
-            <h1 className='text-3xl'>
+            <h1 className='text-[34px]'>
               In Universe
             </h1>
             <p className='text-xl'>

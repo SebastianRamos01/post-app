@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
         <div className='flex gap-3'>
           <Link>
-            <img src={igLogo} alt="instagramLogo" className='w-5'/>
+            <img src={igLogo} alt="instagramLogo" className='w-5 hover:scale-110 transition ease-in-out delay-100'/>
           </Link>
         </div>
     </footer>
