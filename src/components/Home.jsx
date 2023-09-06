@@ -16,7 +16,7 @@ export default function Home() {
             </h1>
             <p className='text-xl'>
               Somos parte de un universo del que conocemos muy poco, materia oscura, energia oscura, espacio infinto.
-              Este blog explora brevemente partes del vasto cosmos que comformamos.
+              Este blog explora brevemente las maravillas y misterios del vasto cosmos que comformamos.
             </p>
           </div>
           <Link to={"/about"}>

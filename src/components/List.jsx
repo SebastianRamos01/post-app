@@ -10,7 +10,7 @@ export default function List() {
         <Header></Header>
         <div className='text-white font-amatic bg-black bg-opacity-30 w-[95%] md:w-[80%] m-auto'>
             <div className='h-[20vh] flex items-center justify-center'>
-                <p className='text-2xl'>All Posts</p>
+                <p className='text-[25px]'>All Posts</p>
             </div>
             <section className='text-white flex flex-col sm:flex-row flex-wrap'>
                 {data?.map(post => 

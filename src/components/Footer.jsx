@@ -18,7 +18,7 @@ export default function Footer() {
             Contact
         </div>
         <div className='flex gap-3'>
-          <Link>
+          <Link to={'https://www.instagram.com/_sbaramos/'}>
             <img src={igLogo} alt="instagramLogo" className='w-5 hover:scale-110 transition ease-in-out delay-100'/>
           </Link>
         </div>
