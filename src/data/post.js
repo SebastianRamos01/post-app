@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         title: 'Canibalismo Galactico',
-        body: 'En las ultimas decadas nos hemos dado cuenta que las galaxias crecen alimentadose de sistemas mas pequeños. Se observo que Andromeda(La galaxia mas proxima a la via lactea) va dejando a su paso una corriente de estrellas o "Migajas Cosmicas" de un festin cosmico que andromeda se dio en algun momento de la historia.',
+        body: 'En las ultimas decadas nos hemos dado cuenta que las galaxias crecen alimentadose de sistemas mas pequeños que no pueden escapar de la atraccion gravitatoria ejercida por la primera. Se observo que Andromeda(La galaxia mas proxima a la via lactea) va dejando a su paso una corriente de estrellas o "Migajas Cosmicas" de un festin cosmico que andromeda se dio en algun momento de la historia.',
         author: 'Equipo de investigacion',
         image: 'andromeda-galaxy.jpeg',
         createdAt: '25/08/2023',
@@ -18,7 +18,7 @@ export default [
     },{
         id: 3,
         title: 'Calendario Cosmico de Carl Sagan',
-        body: 'Un calendario que representa la historia del universo en un año, utilizado para ayudar a comprender la magnitud del tiempo cosmico. El Big Bang se representa como el 1 de enero, el dia que se creo el universo, el presente se representa como el 31 de diciembre(22:30 - Aparicion del primer hombre, 23:59:56 - Nacimiento de Jesucristo, 23:59 - Tiempo actual), lo que da a entender que la historia de la humanidad representa una infinitesima fraccion del tiempo cosmico.',
+        body: 'Un calendario que representa la historia del universo en un año, utilizado para ayudar a comprender la magnitud del tiempo cosmico. El Big Bang se representa como el 1 de enero, el dia que se creo el universo, el 1 de mayo como el dia que se formo la via lactea, el 9 de septiembre se forma el sistema solar, el 14 de septimebre se forma la Tierra, el presente se representa como el 31 de diciembre(22:30 - Aparicion del primer hombre, 23:59:56 - Nacimiento de Jesucristo, 23:59 - Tiempo actual), lo que da a entender que la historia de la humanidad representa una infinitesima fraccion del tiempo cosmico.',
         author: 'Equipo de investigacion',
         image: 'cosmic-calendar.jpeg',
         createdAt: '25/08/2023',
@@ -86,6 +86,14 @@ export default [
         author: 'Equipo de investigacion',
         image: 'cosmic-collision.jpeg',
         createdAt: '31/08/2023',
+        featured: true
+    },{
+        id: 12,
+        title: 'Puente de Eistein-Rosen',
+        body: 'Proximamente...',
+        author: 'Equipo de investigacion',
+        image: 'worm-hole.jpeg',
+        createdAt: '28/09/2023',
         featured: true
     }
 ]

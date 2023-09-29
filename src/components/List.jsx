@@ -6,7 +6,7 @@ import data from '../data/post'
 
 export default function List() {
   return (
-    <div className='bg-gradient-to-br from-black to-violet-950 py-3'>
+    <div className='bg-gradient-to-br from-black to-violet-950 pb-3'>
         <Header></Header>
         <div className='text-white font-amatic bg-black bg-opacity-30 w-[95%] md:w-[80%] m-auto'>
             <div className='h-[20vh] flex items-center justify-center'>

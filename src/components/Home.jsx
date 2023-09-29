@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div className='bg-gradient-to-br from-black to-violet-950 py-3'>
+    <div className='bg-gradient-to-br from-black to-violet-950 pb-3'>
       <Header></Header>
       <div className='text-white font-amatic bg-black bg-opacity-30 w-[95%] m-auto sm:w-[80%]'>
         <section className='flex flex-col justify-center items-center h-[87vh]'>
@@ -21,14 +21,14 @@ export default function Home() {
           </div>
           <Link to={"/about"}>
             <div className='bg-violet-500 px-5 rounded m-1 transition ease-in-out hover:scale-110 duration-300'>
-              More Info
+              Mas Info
             </div>
           </Link>
         </section>
         <Featured></Featured>
         <Link to={"/posts"} className='flex w-fit m-auto'>
           <div className='bg-violet-500 px-5 rounded m-1 transition ease-in-out hover:scale-110 duration-300'>
-            See More 
+            Ver Mas
           </div>
         </Link>
         <Footer></Footer>

@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 export default function About() {
   return (
-    <div className='bg-gradient-to-br from-black to-violet-950 py-3'>
+    <div className='bg-gradient-to-br from-black to-violet-950 pb-3'>
         <Header></Header>
         <div className='text-white font-amatic bg-black bg-opacity-30 w-[95%] m-auto lg:w-[80%]'>
             <div className='text-center w-[80%] m-auto my-10'>
