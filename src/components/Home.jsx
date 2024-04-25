@@ -1,38 +1,31 @@
-import React from 'react'
-import Header from './Header'
-import Featured from './Featured'
-import Footer from './Footer'
-import { Link } from 'react-router-dom'
+import Header from "./Header";
+import Featured from "./Featured";
+import Footer from "./Footer";
+import Background from "./Background";
+import Button from "./Button";
+import CardBg from "./CardBg";
+import Recent from "./Recent";
 
 export default function Home() {
   return (
-    <div className='bg-gradient-to-br from-black to-violet-950 pb-3'>
+    <Background>
       <Header></Header>
-      <div className='text-white font-amatic bg-black bg-opacity-30 w-[95%] m-auto sm:w-[80%]'>
-        <section className='flex flex-col justify-center items-center h-[87vh]'>
-          <div className='text-center w-[80%]'>
-            <h1 className='text-[34px]'>
-              In Universe
-            </h1>
-            <p className='text-xl'>
-              Somos parte de un universo del que conocemos muy poco, materia oscura, energia oscura, espacio infinto.
-              Este blog explora brevemente las maravillas y misterios del vasto cosmos que comformamos.
-            </p>
-          </div>
-          <Link to={"/about"}>
-            <div className='bg-violet-500 px-5 rounded m-1 transition ease-in-out hover:scale-110 duration-300'>
-              Mas Info
-            </div>
-          </Link>
-        </section>
+      <section className="flex flex-col justify-center items-center h-[400px]">
+        <div className="text-center w-[80%]">
+          <p className="text-lg">
+            Somos parte de un universo del que conocemos muy poco, materia
+            oscura, energia oscura, espacio infinto. Este blog explora
+            brevemente las maravillas y misterios del vasto cosmos que
+            comformamos.
+          </p>
+        </div>
+        <Button route={"about"} action={"Mas info"}></Button>
+      </section>
+      <CardBg>
+        <Recent></Recent>
         <Featured></Featured>
-        <Link to={"/posts"} className='flex w-fit m-auto'>
-          <div className='bg-violet-500 px-5 rounded m-1 transition ease-in-out hover:scale-110 duration-300'>
-            Ver Mas
-          </div>
-        </Link>
         <Footer></Footer>
-      </div>
-    </div>
-  )
+      </CardBg>
+    </Background>
+  );
 }

@@ -1,4 +1,4 @@
-export default [
+export const posts = [
     {
         id: 1,
         title: 'Canibalismo Galactico',
@@ -90,7 +90,7 @@ export default [
     },{
         id: 12,
         title: 'Puente de Eistein-Rosen',
-        body: 'Proximamente...',
+        body: 'Situado en el centro de la Via Lactea, este agujero negro supermasivo, se encuentra a unos 26.000 años luz de la Tierra. Se estima que tiene una masa de unos 4,1 millones de masas solares, rodeado por un disco de acrecion, un anillo de gas y polvo que orbita a su alrededor. Todo esto convierte en Sagitario A en el agujero negro supermasivo mas cercano conocido. En 2022 se logro capturar la primera imagen de Sagitario A, tomada por el telescopio del Horizonte de sucesos(EHT).',
         author: 'Equipo de investigacion',
         image: 'worm-hole.jpeg',
         createdAt: '28/09/2023',

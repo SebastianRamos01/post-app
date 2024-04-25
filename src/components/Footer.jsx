@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className='flex flex-col items-center justify-center h-[40vh]'>
+    <footer className='flex flex-col items-center justify-center h-[160px]'>
         <h2 className='text-xl'>
           Web Developing / Web Design
         </h2>

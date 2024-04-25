@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'amatic': ['Amatic SC', 'cursive']
+      'amatic': ['Amatic SC', 'cursive'],
+      'sans': ["Open Sans", "sans-serif"]
     },
     extend: {},
   },

@@ -1,23 +1,36 @@
-import React from 'react'
-import Post from './Post'
-import data from '../data/post'
+import { posts } from "../data/data";
+import Button from "./Button";
 
 export default function Featured() {
-
-  const featureds = data.filter(post => 
-    post.featured === true)
+  const featureds = posts.filter((post) => post.featured === true).slice(0, 2);
   return (
-    <section className='text-white flex flex-col sm:flex-row flex-wrap'>
-        {featureds?.map( post => 
-          <Post
-            key={post.id}
-            source={post.image}
-            title={post.title}
-            body={post.body}
-            author={post.author}
-            created={post.createdAt}
-          ></Post>
-          )}
+    <section className="flex flex-col items-center">
+      <div>
+        <p className="text-2xl">Destacados</p>
+      </div>
+      <ul className="flex flex-col items-center mx-[40px] lg:flex-row lg:gap-5">
+        {featureds?.map((post) => (
+          <div key={post.id} className="flex flex-col items-center lg:w-[50%] lg:flex-row">
+            <div className="w-full h-full">
+              <img
+                src={`/images/${post.image}`}
+                alt={post.title}
+                className="rounded"
+              />
+            </div>
+            <div className="w-full mx-1">
+              <h3 className="text-xl">{post.title}</h3>
+              <p className="">{post.body}</p>
+              <p>- {post.author}</p>
+              <p className="text-gray-500">- publicado {post.createdAt}</p>
+            </div>
+          </div>
+        ))}
+      </ul>
+      <Button
+        action={"Ver Mas"}
+        route={"posts"}
+      ></Button>
     </section>
-  )
+  );
 }
