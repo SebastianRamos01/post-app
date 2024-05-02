@@ -9,13 +9,10 @@ import Recent from "./Recent";
 export default function Home() {
   return (
     <Background>
-      <Header></Header>
-      <section className="flex flex-col justify-center items-center h-[400px]">
+      <section className="flex flex-col justify-center items-center h-[320px]">
         <div className="text-center w-[80%]">
-          <p className="text-lg">
-            Somos parte de un universo del que conocemos muy poco, materia
-            oscura, energia oscura, espacio infinto. Este blog explora
-            brevemente las maravillas y misterios del vasto cosmos que
+          <p className="text-2xl">
+            Este blog explora brevemente las maravillas y misterios del vasto cosmos que
             comformamos.
           </p>
         </div>

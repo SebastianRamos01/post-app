@@ -3,6 +3,7 @@ import Home from './components/Home'
 import About from './components/About'
 import List from './components/List'
 import PostView from './routes/PostView'
+import Books from './routes/Books'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route path='/about' element={ <About/> }></Route>
         <Route path='/posts' element={ <List/> }></Route>
         <Route path='/posts/:id' element={ <PostView/> }></Route>
+        <Route path='/books' element={ <Books/> }></Route>
       </Routes>
     </>
   )

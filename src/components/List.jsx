@@ -1,4 +1,3 @@
-import Header from "./Header";
 import Footer from "./Footer";
 import Post from "./Post";
 import { posts } from "../data/data";
@@ -26,7 +25,6 @@ export default function List() {
 
   return (
     <Background>
-      <Header></Header>
       <div className="h-[20vh] flex items-center justify-center">
         <p className="text-[25px]">All Posts</p>
       </div>

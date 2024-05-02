@@ -10,9 +10,9 @@ export default function Footer() {
         </h2>
         <div className='text-lg flex items-center gap-2'>
           <div className='w-2 h-2 rounded-full bg-violet-500'></div>
-            Ramos Sebastian 
-          <div className='w-2 h-2 rounded-full bg-violet-500'></div>
             2023
+          <div className='w-2 h-2 rounded-full bg-violet-500'></div>
+            Ramos Sebastian 
         </div>
         <div className='text-xl'>
             Contact

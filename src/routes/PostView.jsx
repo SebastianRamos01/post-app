@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { posts } from "../data/data";
 import Background from "../components/Background";
 import CardBg from "../components/CardBg";
-import Header from "../components/Header";
 import Post from "../components/Post";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
@@ -16,12 +15,8 @@ export default function PostView() {
   }
   return (
     <Background>
-      <Header></Header>
-      <div>
-        <h3>Post number {id}</h3>
-      </div>
       <CardBg>
-        <section className="mx-5">
+        <section className="mx-[10px]">
           <div key={post.id} className="flex flex-col items-center my-1">
             <div className="">
               <img
