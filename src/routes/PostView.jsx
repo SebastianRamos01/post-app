@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { posts } from "../data/data";
 import Background from "../components/Background";
 import Footer from "../components/Footer";
-import Button from "../components/Button";
 import Card from "../components/Card";
 
 export default function PostView() {
