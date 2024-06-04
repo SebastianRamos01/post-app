@@ -12,16 +12,16 @@ export default function PostView() {
   }
   return (
     <Background>
-        <section className="mx-5 font-sans">
-          <div key={post.id} className="flex flex-col items-center my-1">
-            <div className="h-[560px] w-full relative overflow-hidden rounded-lg">
+        <section className="mx-5 md:mx-10 font-sans">
+          <div key={post.id} className="flex flex-col my-2 md:flex-row-reverse gap-5">
+            <div className="h-[520px] shrink-0 md:max-w-[320px] w-full relative overflow-hidden rounded-lg">
               <img
                 src={`/images/${post.image}`}
                 alt={post.title}
-                className="rounded-lg absolute scale-[1.8] top-20"
+                className="rounded-lg absolute scale-[1.8] bottom-20"
               />
             </div>
-            <div className="bg-black bg-opacity-40 p-3">
+            <div className="bg-black bg-opacity-40 p-3 text-sm h-fit">
               <h3 className="text-xl">{post.title}</h3>
               <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolor sit amet consectetur adipisicing elit.</p>
               <p className="my-5">{post.body}</p>
