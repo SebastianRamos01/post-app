@@ -1,13 +1,11 @@
 import { useParams } from "react-router-dom";
 import { posts } from "../data/data";
 import Background from "../components/Background";
-import CardBg from "../components/CardBg";
-import Post from "../components/Post";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
+import Card from "../components/Card";
 
 export default function PostView() {
-  const lastPosts = posts.slice(-2).reverse();
   const { id } = useParams();
   const post = posts.find((e) => e.id.toString() === id);
   if (!post) {
@@ -15,47 +13,43 @@ export default function PostView() {
   }
   return (
     <Background>
-      <CardBg>
-        <section className="mx-[10px]">
+        <section className="mx-5 font-sans">
           <div key={post.id} className="flex flex-col items-center my-1">
-            <div className="">
+            <div className="h-[560px] w-full relative overflow-hidden rounded-lg">
               <img
                 src={`/images/${post.image}`}
                 alt={post.title}
-                className="rounded w-full h-full"
+                className="rounded-lg absolute scale-[1.8] top-20"
               />
             </div>
-            <div>
+            <div className="bg-black bg-opacity-40 p-3">
               <h3 className="text-xl">{post.title}</h3>
-              <p className="font-sans font-thin">{post.body}</p>
+              <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p className="my-5">{post.body}</p>
               <p>- {post.author}</p>
-              <p className="text-gray-500">- publicado {post.createdAt}</p>
+              <p className="text-gray-500">- {post.createdAt}</p>
             </div>
           </div>
         </section>
-        <section className="mx-[20px] md:mx-[40px] my-1 flex flex-col items-center">
-            <div className="w-full">
-                <span className="text-xl">
-                    Recientes
-                </span>
-            </div>
-          <ul className="flex flex-wrap justify-center gap-5">
-            {lastPosts.map((post) => (
-              <Post
-                key={post.id}
-                route={post.id}
-                source={post.image}
-                body={post.body}
-                title={post.title}
-                author={post.author}
-                created={post.createdAt}
-              ></Post>
-            ))}
-          </ul>
-          <Button action={"Ver Mas"} route={"posts"} />
-        </section>
+        <LatestPosts />
         <Footer></Footer>
-      </CardBg>
     </Background>
   );
+}
+
+function LatestPosts() {
+  const lastPosts = posts.slice(-5).reverse()
+
+  return(
+    <section className="mx-5 font-sans lg:hidden">
+      <p>Recintes</p>
+      <ul className="flex overflow-hidden flex-row gap-5">
+      {lastPosts.map((elem) => {
+          return (
+            <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+          )
+        })}
+      </ul>
+    </section>
+  )
 }

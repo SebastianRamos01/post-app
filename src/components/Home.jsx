@@ -1,28 +1,47 @@
-import Header from "./Header";
-import Featured from "./Featured";
-import Footer from "./Footer";
 import Background from "./Background";
-import Button from "./Button";
-import CardBg from "./CardBg";
-import Recent from "./Recent";
+import Footer from "./Footer";
+import { posts } from "../data/data";
+import Card from "./Card";
 
 export default function Home() {
   return (
     <Background>
-      <section className="flex flex-col justify-center items-center h-[320px]">
-        <div className="text-center w-[80%]">
-          <p className="text-2xl">
-            Este blog explora brevemente las maravillas y misterios del vasto cosmos que
-            comformamos.
-          </p>
-        </div>
-        <Button route={"about"} action={"Mas info"}></Button>
-      </section>
-      <CardBg>
-        <Recent></Recent>
-        <Featured></Featured>
-        <Footer></Footer>
-      </CardBg>
+      <Featured />
+      <LatestPosts />
+      <Footer></Footer>
     </Background>
   );
+}
+
+function Featured() {
+  const featureds = posts.filter((post) => post.featured === true).slice(0, 3);
+
+  return (
+    <section>
+      <ul className="mx-5 flex flex-col gap-5">
+        {featureds.map((elem) => {
+          return (
+            <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+          )
+        })}
+      </ul>
+    </section>
+  )
+}
+
+function LatestPosts() {
+  const lastPosts = posts.slice(-5).reverse()
+
+  return(
+    <section className="mx-5 font-sans lg:hidden">
+      <p>Recintes</p>
+      <ul className="flex overflow-hidden flex-row gap-5">
+      {lastPosts.map((elem) => {
+          return (
+            <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+          )
+        })}
+      </ul>
+    </section>
+  )
 }

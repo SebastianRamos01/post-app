@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className='flex flex-col items-center justify-center h-[160px]'>
+    <footer className='flex flex-col items-center justify-center h-[160px] p-20 mt-5 bg-black bg-opacity-40'>
         <h2 className='text-xl'>
           Web Developing / Web Design
         </h2>
-        <div className='text-lg flex items-center gap-2'>
+        <div className='flex items-center gap-2 font-sans font-light'>
           <div className='w-2 h-2 rounded-full bg-violet-500'></div>
             2023
           <div className='w-2 h-2 rounded-full bg-violet-500'></div>
