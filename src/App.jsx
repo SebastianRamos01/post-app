@@ -1,14 +1,16 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import PostView from './routes/PostView'
 import Books from './routes/Books'
 import Posts from './routes/Posts'
+import { useEffect } from 'react'
 
 function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={ <Home/> }></Route>
         <Route path='/about' element={ <About/> }></Route>
@@ -21,3 +23,12 @@ function App() {
 }
 
 export default App
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}

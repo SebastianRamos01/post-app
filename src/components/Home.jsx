@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { posts } from "../data/data";
 import Card from "./Card";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ function Featured() {
   const lastPosts = posts.slice(-5).reverse();
 
   return (
-    <section className="mx-5 md:mx-10 flex gap-1">
+    <section className="mx-5 md:mx-10 lg:flex gap-1">
       <ul className="flex flex-col gap-2 md:flex-row flex-wrap md:justify-between">
         {featureds.map((elem) => {
           return (
@@ -51,15 +52,18 @@ function LatestPosts() {
   const lastPosts = posts.slice(-5).reverse()
 
   return(
-    <section className="mx-5 md:mx-10 my-5 font-sans lg:hidden">
+    <section className="mx-5 md:mx-10 my-5 font-sans lg:hidden overflow-hidden">
       <p>Recintes</p>
-      <ul className="flex overflow-hidden flex-row gap-5">
-      {lastPosts.map((elem) => {
-          return (
-            <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
-          )
-        })}
-      </ul>
+      <motion.ul 
+        drag='x'
+        dragConstraints={{right: 0, left: -1100}} 
+        className="flex  gap-5">
+        {lastPosts.map((elem) => {
+            return (
+              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+            )
+          })}
+      </motion.ul>
     </section>
   )
 }

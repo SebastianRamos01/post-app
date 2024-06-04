@@ -25,7 +25,7 @@ export default function Navbar() {
           </div>
         </div>
       )}
-      <div className='hidden lg:flex gap-2 mx-5 '>
+      <div className='hidden lg:flex gap-2'>
         <Link to={"/"} className='p-1'>Home</Link>
         <Link to={"/posts"} className='hover:scale-110 p-1'>Posts</Link>
         <Link to={"/about"} className='hover:scale-110 p-1'>About</Link>

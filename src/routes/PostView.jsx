@@ -3,6 +3,7 @@ import { posts } from "../data/data";
 import Background from "../components/Background";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
+import { motion } from "framer-motion";
 
 export default function PostView() {
   const { id } = useParams();
@@ -30,6 +31,7 @@ export default function PostView() {
             </div>
           </div>
         </section>
+
         <LatestPosts />
         <Footer></Footer>
     </Background>
@@ -37,17 +39,27 @@ export default function PostView() {
 }
 
 function LatestPosts() {
-  const lastPosts = posts.slice(-5).reverse()
+  const featureds = posts.filter((post) => post.featured === true).slice(0, 5);
 
   return(
-    <section className="mx-5 font-sans lg:hidden">
-      <p>Recintes</p>
-      <ul className="flex overflow-hidden flex-row gap-5">
-      {lastPosts.map((elem) => {
-          return (
-            <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
-          )
-        })}
+    <section className="mx-5 md:mx-10 font-sans  overflow-hidden">
+      <p className="my-2">Explorar mas Posts</p>
+      <motion.ul 
+        drag='x'
+        dragConstraints={{right: 0, left: -1100}} 
+        className="flex flex-row gap-5 lg:hidden">
+        {featureds.map((elem) => {
+            return (
+              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+            )
+          })}
+      </motion.ul>
+      <ul className="flex flex-wrap justify-between gap-2">
+        {featureds.map((elem) => {
+            return (
+              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+            )
+          })}
       </ul>
     </section>
   )
