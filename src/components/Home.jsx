@@ -24,7 +24,7 @@ function Featured() {
       <ul className="flex flex-col gap-2 md:flex-row flex-wrap md:justify-between">
         {featureds.map((elem) => {
           return (
-            <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+            <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} head={elem.header} author={elem.author}/>
           )
         })}
       </ul>
@@ -37,7 +37,7 @@ function Featured() {
             return(
               <article key={elem.id} className="bg-black bg-opacity-40 rounded-lg text-sm w-[310px] p-3 flex flex-col">
                 <p className="text-base">{elem.title}</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>{elem.header}</p>
                 <Link to={`/posts/${elem.id}`} className='bg-violet-700 px-6 py-1 my-2 rounded w-fit'>Leer Mas</Link>
               </article>
             )
@@ -60,7 +60,7 @@ function LatestPosts() {
         className="flex  gap-5">
         {lastPosts.map((elem) => {
             return (
-              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} head={elem.header} author={elem.author}/>
             )
           })}
       </motion.ul>

@@ -24,7 +24,7 @@ export default function PostView() {
             </div>
             <div className="bg-black bg-opacity-40 p-3 text-sm h-fit">
               <h3 className="text-xl">{post.title}</h3>
-              <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p className=''>{post.header}</p>
               <p className="my-5">{post.body}</p>
               <p>- {post.author}</p>
               <p className="text-gray-500">- {post.createdAt}</p>
@@ -42,7 +42,7 @@ function LatestPosts() {
   const featureds = posts.filter((post) => post.featured === true).slice(0, 5);
 
   return(
-    <section className="mx-5 md:mx-10 font-sans  overflow-hidden">
+    <section className="mx-5 md:mx-10 font-sans overflow-hidden">
       <p className="my-2">Explorar mas Posts</p>
       <motion.ul 
         drag='x'
@@ -50,14 +50,14 @@ function LatestPosts() {
         className="flex flex-row gap-5 lg:hidden">
         {featureds.map((elem) => {
             return (
-              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} head={elem.header} author={elem.author}/>
             )
           })}
       </motion.ul>
-      <ul className="flex flex-wrap justify-between gap-2">
+      <ul className="lg:flex flex-wrap justify-between gap-2 hidden">
         {featureds.map((elem) => {
             return (
-              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} author={elem.author}/>
+              <Card key={elem.id} i={elem.id} img={elem.image} title={elem.title} head={elem.header} author={elem.author}/>
             )
           })}
       </ul>
